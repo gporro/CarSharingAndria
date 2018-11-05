@@ -6,11 +6,11 @@ spring:
   profiles: local,default
 datasource:
   csa:
-    url: jdbc:mysql://eu-cdbr-west-02.cleardb.net
+    url: jdbc:mysql://eu-cdbr-west-02.cleardb.net/heroku_dde502835bb2f29
     username: befbca17442f08
     password: b93c653d
     driverClassName: com.mysql.jdbc.Driver
-    defaultSchema: heroku_dde502835bb2f29
+    defaultSchema: 
     maxPoolSize: 20
     hibernate:
       hbm2ddl.method: update
@@ -22,11 +22,11 @@ spring:
   profiles: prod
 datasource:
   csa:
-    url: jdbc:mysql://eu-cdbr-west-02.cleardb.net
+    url: jdbc:mysql://eu-cdbr-west-02.cleardb.net/heroku_dde502835bb2f29
     username: befbca17442f08
     password: b93c653d
     driverClassName: com.mysql.jdbc.Driver
-    defaultSchema: heroku_dde502835bb2f29
+    defaultSchema: 
     maxPoolSize: 20
     hibernate:
       hbm2ddl.method: update
