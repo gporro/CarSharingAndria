@@ -1,2 +1,11 @@
+com\CSA\CarSharingAndria\entity\Report.class
+com\CSA\CarSharingAndria\handle\CustomErrorType.class
+com\CSA\CarSharingAndria\entity\Member.class
 com\CSA\CarSharingAndria\App.class
+com\CSA\CarSharingAndria\entity\Transfer.class
+com\CSA\CarSharingAndria\service\MemberServiceImpl.class
+com\CSA\CarSharingAndria\configuration\JpaConfiguration.class
+com\CSA\CarSharingAndria\service\MemberService.class
 com\CSA\CarSharingAndria\controller\Controller.class
+com\CSA\CarSharingAndria\repository\MemberRepository.class
+com\CSA\CarSharingAndria\entity\Trip.class
