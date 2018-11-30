@@ -23,14 +23,14 @@ public class Controller {
 	@Autowired
     MemberService memberService; 
 	
-	@RequestMapping(value = "/test/", method = RequestMethod.GET)
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
 	public ResponseEntity<String> getTestApi() {
 
 		String output = "Test OK";
 		return new ResponseEntity<String>(output, HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/members/", method = RequestMethod.GET)
+	@RequestMapping(value = "/members", method = RequestMethod.GET)
 	public ResponseEntity<List<Member>> getAllMembers() {
 
 		List<Member> listMembers =  memberService.findAllMembers();
