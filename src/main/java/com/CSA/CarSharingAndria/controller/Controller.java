@@ -38,7 +38,7 @@ public class Controller {
 	}
 	
 	@RequestMapping(value = "/test1/", method = RequestMethod.GET)
-	public ResponseEntity<String> getTestApi() {
+	public ResponseEntity<String> getTestApi2() {
 
 		String output = "Test OK 1";
 		return new ResponseEntity<String>(output, HttpStatus.OK);
