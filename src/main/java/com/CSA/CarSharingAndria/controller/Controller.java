@@ -36,4 +36,11 @@ public class Controller {
 		List<Member> listMembers =  memberService.findAllMembers();
 		return new ResponseEntity<List<Member>>(listMembers, HttpStatus.OK);
 	}
+	
+	@RequestMapping(value = "/test1/", method = RequestMethod.GET)
+	public ResponseEntity<String> getTestApi() {
+
+		String output = "Test OK 1";
+		return new ResponseEntity<String>(output, HttpStatus.OK);
+	}
 }
