@@ -25,14 +25,14 @@ public class Controller {
 	
 	@RequestMapping(value = "/test/", method = RequestMethod.GET)
 	public ResponseEntity<String> getTestApi() {
-
+		System.out.println("TESTOK");
 		String output = "Test OK";
 		return new ResponseEntity<String>(output, HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/members/", method = RequestMethod.GET)
 	public ResponseEntity<List<Member>> getAllMembers() {
-
+		System.out.println("member list");
 		List<Member> listMembers =  memberService.findAllMembers();
 		return new ResponseEntity<List<Member>>(listMembers, HttpStatus.OK);
 	}
