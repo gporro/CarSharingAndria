@@ -9,3 +9,4 @@ com\CSA\CarSharingAndria\service\MemberService.class
 com\CSA\CarSharingAndria\controller\Controller.class
 com\CSA\CarSharingAndria\repository\MemberRepository.class
 com\CSA\CarSharingAndria\entity\Trip.class
+com\CSA\CarSharingAndria\excel\ExcelFactory.class

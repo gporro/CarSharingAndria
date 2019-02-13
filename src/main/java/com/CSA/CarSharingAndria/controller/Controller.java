@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.CSA.CarSharingAndria.entity.Member;
+import com.CSA.CarSharingAndria.excel.ExcelFactory;
 import com.CSA.CarSharingAndria.service.MemberService;
 
 @RestController
@@ -25,8 +26,8 @@ public class Controller {
 	
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
 	public ResponseEntity<String> getTestApi() {
-		System.out.println("TESTOK");
-		String output = "Test OK";
+		System.out.println("TEST OK");
+		String output = "Test OK - with sheet";
 		return new ResponseEntity<String>(output, HttpStatus.OK);
 	}
 
@@ -37,10 +38,21 @@ public class Controller {
 		return new ResponseEntity<List<Member>>(listMembers, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value = "/test1/", method = RequestMethod.GET)
-	public ResponseEntity<String> getTestApi2() {
-
-		String output = "Test OK 1";
+	@RequestMapping(value = "/testSheet/", method = RequestMethod.GET)
+	public ResponseEntity<String> getTestSheet() throws Exception {
+		System.out.println("Test OK Test Sheet");
+		
+		List<List<Object>> values = ExcelFactory.getInstance().getValueRange("CARSH!A3:G3");
+		
+		String output = "Test Sheet - ";	
+		if (values == null || values.isEmpty()) {
+			output= output.concat("No data found.");
+		} else {
+			for (List row : values) {
+				output= output.concat(row.get(0) + " / " + row.get(3) + " | ");
+			}
+		}
+		
 		return new ResponseEntity<String>(output, HttpStatus.OK);
 	}
 }
