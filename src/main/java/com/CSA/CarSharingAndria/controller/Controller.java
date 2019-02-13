@@ -37,7 +37,7 @@ public class Controller {
 		List<Member> listMembers =  memberService.findAllMembers();
 		return new ResponseEntity<List<Member>>(listMembers, HttpStatus.OK);
 	}
-	
+
 	@RequestMapping(value = "/testSheet/", method = RequestMethod.GET)
 	public ResponseEntity<String> getTestSheet() throws Exception {
 		System.out.println("Test OK Test Sheet");
@@ -52,7 +52,13 @@ public class Controller {
 				output= output.concat(row.get(0) + " / " + row.get(3) + " | ");
 			}
 		}
-		
+		return new ResponseEntity<String>(output, HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "/test1/", method = RequestMethod.GET)
+	public ResponseEntity<String> getTestApi2() {
+
+		String output = "Test OK 1";
 		return new ResponseEntity<String>(output, HttpStatus.OK);
 	}
 }
